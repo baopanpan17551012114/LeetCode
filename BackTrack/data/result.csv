@@ -1,0 +1,43 @@
+,des,count
+0,"uwsgi进程失联。	#	#	chenqihang,zhangchengshuo,zhangqi06",297
+1,#	feature-service -> order-auth /get/runningOrder	算法 -> order-auth限流触发 alert	没有标记处理人,934
+2,#	#	算法 -> order-auth限流触发 alert	没有标记处理人,587
+3,"主机失联	#	#	chenqihang,zhoucuilian",441
+4,"主机失联	#	#	wangpeng03,zhangchengshuo,zhanweijun,baopanpan,huyadong,zhoucuilian",399
+5,"主机失联	#	#	hurong03,wangpeng03,zhangchengshuo,chenqihang,zhanweijun,baopanpan,zhoucuilian,huyadong",86
+6,"CPU利用率大于60%	#	#	wangpeng03,zhangchengshuo,zhanweijun,baopanpan,huyadong,zhoucuilian",160
+7,#	feature-service -> transporter /internal/nearbyTransporter/list 触发限流	算法 -> transporter限流触发 alert	没有标记处理人,66
+8,#	#	算法 -> transporter限流触发 alert	没有标记处理人,43
+9,"主机发生重启	#	#	wangpeng03,zhangchengshuo,zhanweijun,baopanpan,huyadong,zhoucuilian",299
+10,"主机失联	#	#	chenqihang,zhangchengshuo,zhangqi06,chenjinyuan",4
+11,"CPU利用率大于60%	#	#	hurong03,wangpeng03,zhangchengshuo,chenqihang,zhanweijun,baopanpan,zhoucuilian,huyadong",2
+12,"主机失联	#	#	licai,huyadong,chenqihang,zhoucuilian,yangbo02",4
+13,"uwsgi进程失联。	#	#	wangtiantian01,zhoucuilian,chenqihang",29
+14,"主机失联	#	#	wangtiantian01,zhoucuilian,chenqihang",4
+15,"主机发生重启	#	#	chenqihang,zhoucuilian",86
+16,#	dos -> transporter-group /group/manage/dispatch/order/transporters/get 触发限流	算法 -> transporter-group限流触发 alert	没有标记处理人,84
+17,#	#	算法 -> transporter-group限流触发 alert	没有标记处理人,57
+18,"主机发生重启	#	#	yangbo02,zhoucuilian,huyadong,chenqihang,licai",2
+19,#	bellman -> inshop-order /algorithm/inshop/dispatch/query 触发限流	算法 -> inshop-order限流触发 alert	没有标记处理人,14
+20,#	#	算法 -> inshop-order限流触发 alert	没有标记处理人,30
+21,#	dos -> inshop-order /algorithm/dispatching/scheduling/transporter/infos 触发限流	算法 -> inshop-order限流触发 alert	没有标记处理人,68
+22,#	bellman -> inshop-order /algorithm/dispatch/strategies/execute 触发限流	算法 -> inshop-order限流触发 alert	没有标记处理人,16
+23,#	dos -> transporter-profile /transporter/recommendation/score/batch/recommendationScore/get 触发限流	算法 -> transporter-profile限流触发 alert	没有标记处理人,6
+24,#	#	算法 -> transporter-profile限流触发 alert	没有标记处理人,3
+25,#	persistent://delivery/dos/process_inshop_task_pool-partition-0 -> process_inshop_task_pool	算法服务队列积压	没有标记处理人,2
+26,#	persistent://delivery/dos/process_inshop_task_pool-partition-0 -> process_inshop_task_pool	算法服务队列积压 alert	没有标记处理人,3
+27,#	#	算法服务队列积压	没有标记处理人,1
+28,#	#	算法服务队列积压 alert	没有标记处理人,6
+29,"主机发生重启	#	#	haguangji,yangbo02,zhangqi06,zhoucuilian",18
+30,"主机失联	#	#	haguangji,yangbo02,zhangqi06,zhoucuilian",60
+31,#	dos -> order-auth /brand/transporter/filter	算法 -> order-auth限流触发 alert	没有标记处理人,4
+32,#	persistent://delivery/algo/bellman_distribute_grid_task-partition-0 -> bellman_distribute_grid_task	算法服务队列积压 alert	没有标记处理人,10
+33,主机失联	#	#	zhoucuilian,48
+34,"主机失联	#	#	yangbo02,zhoucuilian,huyadong,licai",36
+35,"主机失联	#	#	hurong03,zhoucuilian",2
+36,"主机失联	#	#	huyadong,zhoucuilian",52
+37,"主机失联	#	#	licai,huyadong,zhoucuilian,yangbo02",38
+38,#	persistent://delivery/algo/planck_merge_order-partition-0 -> planck_merge_order	算法服务队列积压 alert	没有标记处理人,3
+39,"CPU利用率大于60%	#	#	huyadong,zhoucuilian",2
+40,"主机失联	#	#	zhangchengshuo,hurong03,wangpeng03,baopanpan,zhanweijun,zhoucuilian",4
+41,"主机失联	#	#	hurong03,wangpeng03,zhangchengshuo,zhanweijun,baopanpan,zhoucuilian,huyadong",10
