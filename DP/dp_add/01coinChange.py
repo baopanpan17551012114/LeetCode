@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
+import numpy as np
 
 """
 给你 k 种⾯值的硬币，⾯值分别为 c1, c2 ... ck，每种硬币的数量⽆限，再给⼀个总⾦额 amount，
@@ -9,6 +10,25 @@
 """
 
 
+# 递归解法
+def get_recursion(coins, amount):
+    if amount == 0:
+        return 0
+    if amount < 0:
+        return -1
+    result = np.Inf
+    for coin in coins:
+        # 计算子问题的结果
+        pre_value = get_recursion(coins, amount - coin)
+        # 子问题无解则跳过
+        if pre_value == -1:
+            continue
+        # 在子问题中选择最优解
+        result = min(result, pre_value+1)
+    return result
+
+
+# dp
 def get_dp(coins, amount):
     if amount < 0:
         return -1
@@ -21,10 +41,11 @@ def get_dp(coins, amount):
             if i - coin < 0:
                 continue
             dp[i] = min(dp[i], 1+dp[i-coin])
-    print(dp)
     return dp[-1]
 
 
 if __name__ == '__main__':
-    res = get_dp([1, 2, 5], 0)
+    res = get_recursion([1, 2, 5], 11)
+    print(res)
+    res = get_dp([1, 2, 5], 11)
     print(res)
