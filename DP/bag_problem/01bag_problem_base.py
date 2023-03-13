@@ -29,7 +29,7 @@ def get_dp(n, w, wt, val):
             # wt[i-1]表示第i个物品重量，val[i-1]表示第i个物品价值
             # 状态： 背包容量 和 可选择的物品
             # 选择有两种：不更换 或 更换
-            dp[i][j] = max(dp[i-1][j], dp[i-1][j-wt[i-1]]+val[i-1] if j-wt[i-1]>=0 else -np.Inf)
+            dp[i][j] = max(dp[i-1][j], dp[i-1][j-wt[i-1]]+val[i-1] if j-wt[i-1] >= 0 else -np.Inf)
 
     print(dp[-1][-1])
 

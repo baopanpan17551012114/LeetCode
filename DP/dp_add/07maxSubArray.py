@@ -17,7 +17,7 @@ def get_dp(nums):
     dp = [-np.Inf] * len(nums)
     # base case
     dp[0] = nums[0]
-    # dp表示：以dp[i-1]为结尾的子数组的长度
+    # dp表示：以dp[i-1]为结尾的子数组的和
     for i in range(1, len(nums)):
         dp[i] = max(nums[i] + dp[i-1], nums[i])
     print(max(dp))
