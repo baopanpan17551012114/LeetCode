@@ -8,7 +8,6 @@
 """
 import copy
 
-
 def get_sub_sets_with_dup(nums):
     result_list = []
     path_list = []
