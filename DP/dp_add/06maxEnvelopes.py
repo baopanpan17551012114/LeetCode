@@ -13,7 +13,6 @@
 输入：envelopes = [[1,1],[1,1],[1,1]]
 输出：1
 
-最长二维递增子序列
 """
 
 
@@ -22,7 +21,9 @@ def get_recursion(envelopes):
 
 
 def get_dp(envelopes):
-    pass
+    dp = [0] * len(envelopes)
+    # base case
+    dp[0] = 1
 
 
 if __name__ == '__main__':
