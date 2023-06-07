@@ -37,7 +37,7 @@ def get_longest_common_sequence(str1, str2):
                 dp[i][j] = dp[i-1][j-1] + 1
             else:
                 dp[i][j] = max(dp[i-1][j], dp[i][j-1])
-    print(dp)
+    print(dp[-1][-1])
 
 
 def get_longest_sub_sequence(str1, str2):
@@ -61,7 +61,7 @@ def get_longest_sub_sequence(str1, str2):
 
 
 if __name__ == '__main__':
-    get_longest_common_sequence('ABCBDAB', 'BDCABA')
-    get_longest_sub_sequence('ABCBDAB', 'BDCABA')
+    get_longest_common_sequence("ezupkr", "ubmrapg")
+    # get_longest_sub_sequence('ABCBDAB', 'BDCABA')
 
 

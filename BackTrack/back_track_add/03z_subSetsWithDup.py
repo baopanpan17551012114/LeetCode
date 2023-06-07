@@ -30,5 +30,7 @@ def back_track(nums, result_list, path_list, index):
 
 
 if __name__ == '__main__':
-    res = get_sub_sets_with_dup([1, 2, 2])
+    # nums = [1, 2, 2]
+    nums = [10, 1, 2, 7, 6, 1, 5]
+    res = get_sub_sets_with_dup(nums)
     print(res)
