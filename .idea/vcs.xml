@@ -2,8 +2,28 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/LovePrint" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/kohya_ss" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/lora" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lora-scripts" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lora-scripts/sd-scripts" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/sd-scripts" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/sta_text_to_video/text-to-video-ms-1.7b" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/stable-diffusion-webui" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/stable-diffusion-webui/extensions/Stable-Diffusion-Webui-Civitai-Helper" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/stable-diffusion-webui/extensions/sd-webui-additional-networks" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/stable-diffusion-webui/extensions/sd-webui-bilingual-localization" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/stable-diffusion-webui/extensions/sd-webui-controlnet" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/stable-diffusion-webui/extensions/sd_civitai_extension" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/stable-diffusion-webui/extensions/sd_dreambooth_extension" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/stable-diffusion-webui/repositories/BLIP" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/stable-diffusion-webui/repositories/CodeFormer" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/stable-diffusion-webui/repositories/k-diffusion" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/stable-diffusion-webui/repositories/stable-diffusion-stability-ai" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/stable-diffusion-webui/repositories/taming-transformers" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/xformers" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/xformers/third_party/cutlass" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/xformers/third_party/flash-attention" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/xformers/third_party/flash-attention/csrc/flash_attn/cutlass" vcs="Git" />
   </component>
 </project>
