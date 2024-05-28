@@ -26,4 +26,6 @@ class Solution:
 
 if __name__ == '__main__':
     # 回溯法
-    pass
+    li = [1, 2, 3]
+    res = li[::-1]
+    print(res)

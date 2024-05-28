@@ -54,8 +54,19 @@ def binary_search_right(nums, target):
     return right
 
 
+def binary_search_recursion(nums, left, right, target):
+    if left > right:
+        return None
+    mid = int((left + right) / 2)
+    if nums[mid] == target:
+        return mid
+    if nums[mid] < target:
+        return binary_search_recursion(nums, mid + 1, right, target)
+    else:
+        return binary_search_recursion(nums, left, mid - 1, target)
+
 if __name__ == '__main__':
     # re = binary_search([1, 2, 3, 4, 5], 1)
     # re = binary_search_left([1, 2, 4, 4, 4, 5], 1)
-    re = binary_search_right([1, 2, 3, 4, 4, 5], 3)
+    re = binary_search_recursion([1, 2, 3, 4, 5, 6], 0, 5, 3)
     print(re)

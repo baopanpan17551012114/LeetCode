@@ -5,79 +5,39 @@
 如果链表中的节点数不是 k 的倍数，将最后剩下的节点保持原样
 你不能更改节点中的值，只能更改节点本身。"""
 
+
+# Definition for singly-linked list.
 class ListNode:
-    def __init__(self, x):
-        self.val = x
-        self.next = None
-#
-# 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
-#
-#
-# @param head ListNode类
-# @param k int整型
-# @return ListNode类
-#
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+
+from typing import Optional
+
+
 class Solution:
-    def reverse_k_group(self, head_start, head_end):
-        new_root_start = None
-        new_root_end = head_start
-        while head_start != head_end:
-            first = head_start
-            second = head_start.next
-            head_start.next = new_root_start
-            new_root_start = first
-            head_start = second
-        first = head_end
-        first.next = new_root_start
-        new_root_start = first
-        return new_root_start, new_root_end
+    def reverse(self, a, b):
+        current_node = a
+        current_next_node = a
+        new_head = None
+        while current_node != b:
+            current_next_node = current_node.next
+            current_node.next = new_head
+            new_head = current_node
+            current_node = current_next_node
+        return new_head
 
-    def reverseKGroup(self, head: ListNode, k: int) -> ListNode:
-        # write code here
-        if k == 1:
-            return head
-        total_start = head
-        total_end = None
-        root = head
-        origin_next = None
-        tmp_start = head
-        tmp_end = head
-        index = 0
-        while head != None:
-            second = head.next
-            index += 1
-            if index % k == 0:
-                if tmp_start != root:
-                    tmp_start = origin_next
-                tmp_end = head
-                list_start, list_end = self.reverse_k_group(tmp_start, tmp_end)
-                tmp_start = None
-                if total_start == root:
-                    total_start = list_start
-                    total_end = list_end
-                else:
-                    total_end.next = list_start
-                    total_end = list_end
-                origin_next = second
-            head = second
-        if origin_next != None:
-            total_end.next = origin_next
-        return total_start
+    def reverseKGroup(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:
+        if not head:
+            return None
 
+        a, b = head, head
+        for i in range(k):
+            if b is None:
+                return a
+            b = b.next  # 如果放在if之前, 那么最后正好k个的话会不做反转操作
 
-if __name__ == '__main__':
-    l1 = ListNode(1)
-    l2 = ListNode(2)
-    l3 = ListNode(3)
-    l4 = ListNode(4)
-    l5 = ListNode(5)
-    l1.next = l2
-    l2.next = l3
-    l3.next = l4
-    l4.next = l5
-    root = l1
-    re = Solution().reverseKGroup(l1, 2)
-    while re!=None:
-        print(re.val, end=" ")
-        re = re.next
-
+        new_head = self.reverse(a, b)
+        a.next = self.reverseKGroup(b, k)
+        return new_head
