@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 
-
 class Solution:
     def decodeString(self, s: str) -> str:
         num_stack = []
