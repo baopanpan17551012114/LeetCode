@@ -120,13 +120,3 @@ if __name__ == '__main__':
     origin_path = '/Users/baopanpan/Desktop/31未派数据.xlsx'
     get_filter_step(filter_path, origin_path)
 
-    # 1417, 602 815,
-    # 454, 208, 246
-
-    """
-    6500 
-    现在190左右，总单量1.6W, 人效：38
-    90家左右 派单占比小于0.3
-    
-    
-    """
