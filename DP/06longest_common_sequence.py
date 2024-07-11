@@ -45,6 +45,7 @@ def get_longest_sub_sequence(str1, str2):
     n = len(str2)
     dp = [[0 for i in range(n)] for j in range(m)]
     dp[0][0] = 1 if str1[0] == str2[0] else 0
+    # 第一行/第一列先计算出来
     for i in range(1, n):
         dp[0][i] = int((str2[i] == str1[0]) or dp[0][i - 1])
     for j in range(1, m):

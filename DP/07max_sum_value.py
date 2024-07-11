@@ -97,39 +97,39 @@ def get_max_product(value_list):
 
 
 if __name__ == '__main__':
-    # get_max_sum_value([1, 2, 3, -6, 1])
-    # get_max_sum_value_beta([1, 4, -3, 6, 1])
-    #
-    # get_max_sum_sequence([1, 2, 3, -6, 1])
-    #
-    # get_max_product([2, 4, -3, -6])
-    class Solution:
-        def decodeString(self, s: str) -> str:
-            num_stack = []
-            str_stack = []
-            mul = 0
-            for index in range(len(s)):
-                ele = s[index]
-                if '0' <= ele <= '9':
-                    mul = mul * 10 + int(ele)
-                else:
-                    if mul != 0:
-                        num_stack.append(mul)
-                        mul = 0
-                    if ele != ']':
-                        str_stack.append(ele)
-                    else:
-                        tmp_str = ''
-                        while True:
-                            bit = str_stack.pop()
-                            if bit == '[':
-                                break
-                            tmp_str = bit + tmp_str
-                        num = num_stack.pop()
-                        child_str = tmp_str * num
-                        str_stack.append(child_str)
-            return ''.join(str_stack)
+    get_max_sum_value([1, 2, 3, -6, 1])
+    get_max_sum_value_beta([1, 4, -3, 6, 1])
 
-    # "100[leetcode]"
-    res = Solution().decodeString("100[leetcode]")
-    print(res)
+    get_max_sum_sequence([1, 2, 3, -6, 1])
+
+    get_max_product([2, 4, -3, -6])
+    # class Solution:
+    #     def decodeString(self, s: str) -> str:
+    #         num_stack = []
+    #         str_stack = []
+    #         mul = 0
+    #         for index in range(len(s)):
+    #             ele = s[index]
+    #             if '0' <= ele <= '9':
+    #                 mul = mul * 10 + int(ele)
+    #             else:
+    #                 if mul != 0:
+    #                     num_stack.append(mul)
+    #                     mul = 0
+    #                 if ele != ']':
+    #                     str_stack.append(ele)
+    #                 else:
+    #                     tmp_str = ''
+    #                     while True:
+    #                         bit = str_stack.pop()
+    #                         if bit == '[':
+    #                             break
+    #                         tmp_str = bit + tmp_str
+    #                     num = num_stack.pop()
+    #                     child_str = tmp_str * num
+    #                     str_stack.append(child_str)
+    #         return ''.join(str_stack)
+    #
+    # # "100[leetcode]"
+    # res = Solution().decodeString("100[leetcode]")
+    # print(res)

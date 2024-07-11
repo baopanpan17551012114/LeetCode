@@ -16,7 +16,6 @@
 #         arr[right] = arr[left]
 #     arr[left] = value
 #     return left
-import sys
 
 
 def quick_sort(array, start, end):

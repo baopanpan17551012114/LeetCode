@@ -28,6 +28,24 @@ def get_dp(nums):
     return max(dp)
 
 
+def double_point(nums):
+    left_index = 0
+    right_index = 0
+    length_res = 0
+    while right_index <= len(nums)-1:
+        if nums[right_index+1] < nums[right_index]:
+            length_res = max(left_index, right_index-left_index)
+            left_index = right_index + 1
+            right_index = left_index + 1
+        else:
+            right_index += 1
+    length_res = max(length_res, right_index-left_index)
+    print(length_res)
+
+
 if __name__ == '__main__':
     result = get_dp([10, 9, 2, 5, 3, 7, 101, 18])
     print(result)
+    double_point([10, 9, 2, 5, 3, 7, 101, 18])
+
+    # 最长递增子序列长度:

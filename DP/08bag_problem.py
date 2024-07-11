@@ -33,7 +33,18 @@ def get_max_bag_value(w, v, capacity):
             else:
                 dp[i][j] = max(dp[i-1][j], dp[i-1][j-w[i-1]] + v[i-1])
     print(dp)
+    print(dp[-1][-1])
 
 
 if __name__ == '__main__':
     get_max_bag_value([1, 2, 3], [40, 30, 10], 4)
+
+
+
+
+
+
+
+
+
+

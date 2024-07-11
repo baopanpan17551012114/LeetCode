@@ -19,7 +19,7 @@ class Solution:
     def maxResult(self, nums: List[int], k: int) -> int:
         dp = [-float('inf')] * len(nums)
         dp[0] = nums[0]
-        index_list = [0]
+        index_list = [0]  # 前k步的最大值
         for i in range(1, len(nums)):
             if index_list[0] < i-k:
                 index_list.pop(0)
@@ -32,8 +32,24 @@ class Solution:
         return dp[-1]
 
 
+def test_max(nums, k):
+    dp = [-float('inf')]*len(nums)
+    dp[0] = nums[0]
+    for i in range(1, len(nums)):
+        max_value = dp[-1]
+        for j in range(i, i-k-1, -1):
+            if j < 0:
+                break
+            max_value = max(max_value, dp[j])
+        dp[i] = max_value + nums[i]
+    print(dp[-1])
+
+
+
 if __name__ == '__main__':
     nums = [1, -1, -2, 4, -7, 3]
     k = 2
     res = Solution().maxResult(nums, k)
     print(res)
+
+    test_max([1, -1, -2, 4, -7, 3], 2)

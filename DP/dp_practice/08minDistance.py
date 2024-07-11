@@ -40,6 +40,6 @@ class Solution:
 
 if __name__ == '__main__':
     word1 = "horse"
-    word2 = "ros"
+    word2 = "horse"
     res = Solution().minDistance(word1, word2)
     print(res)
