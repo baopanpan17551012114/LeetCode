@@ -115,7 +115,7 @@ def get_filter_step(filter_path, origin_path):
 
 
 if __name__ == '__main__':
-    # get_not_assign_same_transporter()
+    get_not_assign_same_transporter()
     filter_path = '/Users/baopanpan/Desktop/31未派过滤原因.csv'
     origin_path = '/Users/baopanpan/Desktop/31未派数据.xlsx'
     get_filter_step(filter_path, origin_path)
